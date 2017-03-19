@@ -108,7 +108,3 @@ body { background-color: #fff; padding: 20px; }
 #myQuiz .active, #myQuiz .inactive { transition: left 1.5s ease-in-out; }
 #myQuiz .active { left: 40px; }
 #myQuiz .intro.inactive, #myQuiz.inactive.answered { left: -1350px; }
-
-/* test */
- #myQuiz { height: 1000px; }
- #myQuiz .results { top: 650px !important; left: 40px !important; }

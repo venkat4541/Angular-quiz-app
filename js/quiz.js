@@ -43,6 +43,14 @@
 			return $scope.activeQuestion += 1;
 		}
 
+		$scope.createShareLinks = function(percentage) {
+			var url = 'http://codifydesign.com';
+			var emailLink = '<a class="btn email" href="mailto:?subject=Try to beat my quiz score!&amp;body=I scored a '+percentage+'% on this quiz on Saturn. Try to beat my score at '+url+'">Email a friend</a>'
+			var twitterLink = '<a class="btn twitter" href="http://twitter.com/share?text=I scored a X% on this quiz about Saturn. Try to beat my score at&amp;hashtags=SaturnQuiz&amp;url='+url+'" target="_blank">Tweet your score.</a>'
+			var newMarkUp = emailLink + twitterLink;
+			return $sce.trustAsHtml(newMarkUp);
+		}
+
   }]);
 
 })();
