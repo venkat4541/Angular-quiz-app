@@ -69,6 +69,11 @@ body { background-color: #fff; padding: 20px; }
 #myQuiz .question.unanswered .ans:hover { background-color: rgba(238,189,102,.2);}
 
 #myQuiz .question.answered .ans { cursor: default; }
+#myQuiz .question .ans.image {
+  min-height: 60px; padding: 0; background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 
 /* Feedback */
 #myQuiz .feedback {
