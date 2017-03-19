@@ -3,7 +3,7 @@
 	var app = angular.module('myQuiz',[]);
 
   app.controller('QuizController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-    $scope.score = 1;
+    $scope.score = 0;
     $scope.activeQuestion = -1;
     $scope.activeQuestionAnswered = 0;
     $scope.percentage = 0;
@@ -27,6 +27,8 @@
 				}
 				$scope.myQuestions[qIndex].questionState = 'answered';
 			}
+			console.log($scope.score);
+			$scope.percentage = (($scope.score / $scope.totalQuestions) * 100).toFixed(2);
     }
 
 		$scope.isSelected = function(qIndex, aIndex) {
@@ -35,6 +37,10 @@
 
 		$scope.isCorrect = function(qIndex, aIndex) {
 			return $scope.myQuestions[qIndex].correctAnswer === aIndex;
+		}
+
+		$scope.selectContinue = function() {
+			return $scope.activeQuestion += 1;
 		}
 
   }]);
