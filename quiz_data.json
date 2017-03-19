@@ -7,7 +7,7 @@
       {"id"  : 2, "text" : "Second" },
       {"id"  : 3, "text" : "Eighth" }
     ],
-    "correct"  : 3
+    "correct"  : 1
   },
   {
     "question" : "Which image shows a close-up of Saturn?",
